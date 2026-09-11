@@ -15,16 +15,16 @@ import torch
 
 try:
     from dataset_io import load_dataset_splits
-    from . import eval_fno
-    from .common import (
+    from euler1d import eval_fno
+    from euler1d.common import (
         CHANNEL_NAMES,
         rollout_model_1d,
         rollout_vae_latent_mean_1d,
         rollout_vae_mean_1d,
         safe_torch_load,
     )
-    from .train_ae import _build_model as _build_ae_model
-    from .train_vamo import _build_model as _build_vae_model
+    from euler1d.train_ae import _build_model as _build_ae_model
+    from euler1d.train_vamo import _build_model as _build_vae_model
 except ImportError:
     from dataset_io import load_dataset_splits
     from euler1d import eval_fno

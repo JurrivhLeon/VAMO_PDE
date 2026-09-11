@@ -15,12 +15,12 @@ import torch
 try:
     from dataset_io import load_dataset_splits
     from latent_markov_trainer import rollout_latent_markov_2d
-    from . import eval_ae
-    from . import eval_fno
-    from .cfd_data import STATE_CHANNELS
-    from .train_ae import _build_model as _build_ae_model
-    from .train_vamo import _build_model as _build_vae_model
-    from .train_vamo import _rollout_vae_latent_mean, _rollout_vae_mean
+    from cfd2d import eval_ae
+    from cfd2d import eval_fno
+    from cfd2d.cfd_data import STATE_CHANNELS
+    from cfd2d.train_ae import _build_model as _build_ae_model
+    from cfd2d.train_vamo import _build_model as _build_vae_model
+    from cfd2d.train_vamo import _rollout_vae_latent_mean, _rollout_vae_mean
 except ImportError:
     from dataset_io import load_dataset_splits
     from latent_markov_trainer import rollout_latent_markov_2d

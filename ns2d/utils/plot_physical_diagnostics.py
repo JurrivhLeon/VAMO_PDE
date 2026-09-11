@@ -16,10 +16,10 @@ import torch
 
 try:
     from dataset_io import load_dataset_splits
-    from . import eval_ae
-    from . import eval_fno
-    from . import eval_vamo as eval_vae
-    from .train_vamo import rollout_vae_latent_mean, rollout_vae_mean
+    from ns2d import eval_ae
+    from ns2d import eval_fno
+    from ns2d import eval_vamo as eval_vae
+    from ns2d.train_vamo import rollout_vae_latent_mean, rollout_vae_mean
 except ImportError:
     from dataset_io import load_dataset_splits
     from ns2d import eval_ae

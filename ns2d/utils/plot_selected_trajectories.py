@@ -22,7 +22,7 @@ try:
     )
 except ImportError:
     from dataset_io import load_dataset_splits
-    from ns2d.plot_physical_diagnostics import (
+    from ns2d.utils.plot_physical_diagnostics import (
         FORCINGS,
         METHODS,
         _method_summary,
