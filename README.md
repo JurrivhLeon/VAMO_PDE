@@ -10,6 +10,19 @@ This repository accompanies the manuscript:
 
 Paper: [arXiv:2609.16621](https://arxiv.org/abs/2609.16621)
 
+This codebase is a cleaned and focused release of the PDE experiments used for VAMO. We retained the active CFD2D, Euler1D, and periodic NS2D benchmarks, consolidated the multi-channel VAMO/autoencoder training paths, removed unused legacy PDE instances and single-channel variants, and organized plotting utilities under each benchmark directory.
+
+<p align="center">
+  <img src="ns2d/figs/ns2d_nu4_sinusoidal_sample_0136_trajectory.jpeg" width="96%">
+</p>
+<p align="center">
+  <img src="ns2d/figs/ns2d_nu5_sinusoidal_sample_0007_trajectory.jpeg" width="96%">
+</p>
+
+<p align="center">
+  <em>Example long-horizon VAMO rollouts on periodic 2D Navier-Stokes benchmarks.</em>
+</p>
+
 ## Repository Structure
 
 ```text
@@ -19,6 +32,7 @@ Paper: [arXiv:2609.16621](https://arxiv.org/abs/2609.16621)
 ├── euler1d/                  # 1D compressible Euler benchmark
 │   └── utils/                # Plotting and analysis utilities
 ├── ns2d/                     # Periodic 2D incompressible Navier-Stokes benchmark
+│   ├── figs/                 # Example rollout visualizations
 │   └── utils/                # Plotting and analysis utilities
 ├── dataset_io.py             # Dataset serialization helpers
 ├── fno.py                    # Fourier neural operator baseline modules
@@ -98,8 +112,6 @@ The repository contains code paths for the main experiments in the paper, includ
 - comparisons with autoregressive curriculum training;
 - supplementary visualization and diagnostic experiments.
 
-Detailed commands for reproducing individual tables and figures will be added here.
-
 ## Citation
 
 If you find this work useful, please cite:
@@ -113,6 +125,3 @@ If you find this work useful, please cite:
 }
 ```
 
-## Notes
-
-Generated datasets, checkpoints, outputs, plots, logs, and cache files are intentionally ignored by git. Please avoid committing large generated artifacts directly to the repository.
